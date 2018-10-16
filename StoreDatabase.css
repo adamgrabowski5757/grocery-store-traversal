@@ -1,0 +1,75 @@
+body {
+	color: black;
+	background-image: url("https://images.pexels.com/photos/242236/pexels-photo-242236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+	font-family: Georgia, Times, seriff;
+	width: 80%;
+	color: black;
+	margin: auto !important;
+	border: 2px solid #D3D3D3;
+	padding: 10px;
+}
+
+div#header {
+	color: #dfdfdf;
+	text-align: center;
+	background-color: #26466D;
+	border: 2px solid #D3D3D3;
+}
+
+
+.body {
+	border: 2px solid #D3D3D3;
+	background-color: #22316C;
+	height: 600px;
+	padding: 20px 15px 15px 20px;
+}
+
+input#cart {
+	height: 40px;
+	width: 20%;
+
+}
+
+select#select {
+	height: 150px;
+	width: 12%;
+
+}
+
+
+
+.search {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.button {
+	padding: 20px;
+	color: #26466D;
+}
+
+.map {
+	text-align: center;
+}
+
+.left {
+	background-color: #e8e8e8;
+	width: 40%;
+	height: 450px;
+	float: left;
+	padding: 10px;
+	
+}
+
+.right {
+	background-color: #e8e8e8;
+	width: 50%;
+	height: 450px;
+	float: right;
+	padding: 10px;
+}
+
+#Directions {
+    white-space: pre;
+  }
+

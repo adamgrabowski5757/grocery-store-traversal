@@ -1,0 +1,88 @@
+<!--Hello Grocery Project-->
+<!DOCTYPE html>
+<html>
+<head>
+  	<link rel="stylesheet" href="StoreDatabase.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="cytoscape.js"></script>  
+  	<title>Hello Grocery! </title>
+</head>
+
+
+<body>
+	<div id="header">
+		<h1>Hello Grocery</h1>
+	</div>
+	
+	<div class="body">
+		  <div class="search">
+		  	<form>
+				<p><br>
+				</p>
+			</form>
+		  </div>
+	
+			<div class="left">
+				<div class="container">
+					<h4>Grocery Categories</h4>
+					<h6>Select all items to be added to cart:</h6>
+					<h6>(Hold control/command to select multiple)</h6>
+ 				 		<select id="select" name="products" multiple>
+							<option id="Bread">Bread</option>
+							<option id="Cheese">Cheese</option>
+							<option id="Milk">Milk</option>
+							<option id="Soup">Soup</option>
+							<option id="Tortillas">Tortillas</option>
+							<option id="Carrots">Carrots</option>
+    						<option id="Ice Cream">Ice Cream</option>
+    						<option id="Cake">Cake</option>
+							<option id="Sauces">Sauces</option>
+							
+						</select>	
+				</div>
+				<br><br><br><br><br>
+				<div class="container">
+ 					 <button id="outputcart" onClick="outputCart()">Add item to your cart</button><br><br>
+  					 <input id="cart" type="textbox" placeholder="Your cart is empty" name="output"></input>
+				</div>
+				
+				<script language="javascript">
+					function outputCart(){
+   						var i = 0;
+  						var selectItems = document.getElementsByName('products')[i].selectedOptions; 
+   						var shoppinglistinput = [];
+   						for(let options of selectItems){
+							shoppinglistinput.push(options.value);
+  						}
+						   document.getElementsByName('output')[i].value= shoppinglistinput.join(", ");
+						   return shoppinglistinput;
+					}
+				</script>
+			</div>
+			<div class="right">
+					<div class="button">
+						<button id="directbutton" type="button" class="btn btn-primary btn-block">Generate Directions</button>
+					</div>
+				
+					<p id="Directions"></p>
+
+					<div id="cy"></div>
+				<style>
+					#cy {
+						width: 95%;
+						height: 95%;
+						position: right;
+						bottom: 30px;
+						left: 10px;
+						font-size: 10;
+					}
+				</style>
+			</div>
+
+	</div>
+</body>
+<script src="StoreDatabase.js"></script>
+</html>
